@@ -6,22 +6,22 @@ const Gallery = () => {
     {
       id: 1,
       title: "Sillones - Restauración Completa",
-      before: "/images/gallery/real/sofa-morado-antes.jpeg",
-      after: "/images/gallery/real/sofa-morado-despues.jpeg", 
+      before: "./images/gallery/real/sofa-morado-antes.jpeg",
+      after: "./images/gallery/real/sofa-morado-despues.jpeg", 
       description: "Recuperación total de sillones con desgaste extremo. Eliminación de manchas profundas y restauración del color original."
     },
     {
       id: 2, 
       title: "Sillas - Renovación Profesional",
-      before: "/images/gallery/real/sillas-antes.jpeg",
-      after: "/images/gallery/real/sillas-despues.jpeg",
+      before: "./images/gallery/real/sillas-antes.jpeg",
+      after: "./images/gallery/real/sillas-despues.jpeg",
       description: "Limpieza especializada de sillas. Eliminación de suciedad acumulada y restauración de la textura original."
     },
     {
       id: 3,
       title: "Colchones - Eliminación de Manchas Difíciles", 
-      before: "/images/gallery/real/sofa-gris-antes.jpeg",
-      after: "/images/gallery/real/sofa-gris-despues.jpeg",
+      before: "./images/gallery/real/sofa-gris-antes.jpeg",
+      after: "./images/gallery/real/sofa-gris-despues.jpeg",
       description: "Tratamiento profundo para colchones con manchas persistentes. Recuperación completa del tono y suavidad original."
     },
     {

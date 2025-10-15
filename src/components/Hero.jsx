@@ -3,8 +3,9 @@ import React from 'react';
 const Hero = ({ scrollY = 0 }) => {
   return (
     <section id="inicio" className="relative overflow-hidden h-[75vh] flex items-center">
-      {/* Video background - Full screen */}
+      {/* Background - Compatible con GitHub Pages */}
       <div className="absolute inset-0 z-0">
+        {/* Video background con fallback mejorado */}
         <video 
           className="w-full h-full object-cover hero-video"
           autoPlay 
@@ -14,24 +15,34 @@ const Hero = ({ scrollY = 0 }) => {
           onError={(e) => {
             // Si el video falla, mostrar el div de fallback
             e.target.style.display = 'none';
-            e.target.nextElementSibling.style.display = 'flex';
+            e.target.nextElementSibling.style.display = 'block';
           }}
         >
-          <source src="/videos/hero/WhatsApp%20Video%202025-10-07%20at%206.19.11%20PM.mp4" type="video/mp4" />
-          <source src="/videos/hero/WhatsApp Video 2025-10-07 at 6.19.11 PM.mp4" type="video/mp4" />
+          <source src="./videos/hero/WhatsApp%20Video%202025-10-07%20at%206.19.11%20PM.mp4" type="video/mp4" />
+          <source src="./videos/hero/hero-video.mp4" type="video/mp4" />
         </video>
         
-        {/* Fallback content - se muestra si el video no carga */}
-        <div className="w-full h-full bg-gradient-to-br from-blue-500 to-cyan-400 items-center justify-center hidden">
-          <img 
-            src="/images/logo/WhatsApp%20Image%202025-10-07%20at%206.20.39%20PM.jpeg" 
-            alt="Clint Logo" 
-            className="w-32 h-32 object-contain"
-          />
+        {/* Fallback background mejorado - siempre visible en GitHub Pages */}
+        <div className="w-full h-full bg-gradient-to-br from-blue-600 via-blue-700 to-cyan-600 flex items-center justify-center"
+             style={{
+               backgroundImage: `
+                 radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+                 radial-gradient(circle at 80% 80%, rgba(34, 211, 238, 0.3) 0%, transparent 50%),
+                 radial-gradient(circle at 40% 60%, rgba(29, 78, 216, 0.2) 0%, transparent 50%)
+               `,
+               backgroundSize: '100% 100%'
+             }}>
+          {/* Pattern overlay para más textura */}
+          <div className="absolute inset-0 opacity-10" 
+               style={{
+                 backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+                 backgroundSize: '60px 60px'
+               }}>
+          </div>
         </div>
         
         {/* Enhanced overlay for better text readability */}
-        <div className="absolute inset-0 hero-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
       </div>
 
       {/* Content overlay */}
@@ -47,7 +58,7 @@ const Hero = ({ scrollY = 0 }) => {
           >
             <div className="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
               <img 
-                src="/images/logo/logo.png" 
+                src="./images/logo/logo.png" 
                 alt="Clint Logo" 
                 className="w-28 h-28 object-contain"
               />

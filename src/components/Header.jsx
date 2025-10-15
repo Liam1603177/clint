@@ -20,7 +20,7 @@ const Header = () => {
               <div className="flex items-center space-x-2">
                 {/* Logo actual de Clint */}
                 <img 
-                  src="/images/logo/logo.png" 
+                  src="./images/logo/logo.png" 
                   alt="Clint Logo" 
                   className="w-14 h-14 object-contain"
                 />

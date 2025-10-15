@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 sm:space-x-3 mb-2 sm:mb-3 lg:mb-4">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center">
                 <img 
-                  src="/images/logo/logo.png" 
+                  src="./images/logo/logo.png" 
                   alt="Clint Logo" 
                   className="w-full h-full object-contain"
                 />
